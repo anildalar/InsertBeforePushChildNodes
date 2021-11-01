@@ -1,0 +1,19 @@
+Topics
+JS
+1.InsertBefore  VS appendCHild Append
+2.ChildNode
+
+
+node.insertBefore(newnode, existingnode)
+
+https://www.w3schools.com/jsref/met_node_insertbefore.asp
+
+
+Array Operation
+
+Push  = Add
+Pop   = Remove
+
+
+C?T:F
+Condition?True:Falsee

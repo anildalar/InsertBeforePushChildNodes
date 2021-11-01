@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>InsertBefore</title>
+    </head>
+    <body>
+        <h1>OKLABS Students</h1>
+        <ul id="myStudents">
+            <li>Avinash</li>
+            <li>Abhishek</li>
+        </ul>
+
+        <button onclick="addNewStudent('Kiran')">Add New Student</button>
+        <script>
+
+            //Lets Create an array
+
+            //1. []  ES6 //New Fashion
+            //2. new Array() //Old Fashion
+
+            var students = [];
+
+            //1. Function defination
+            function addNewStudent(stuname){
+                //function body
+                //alert('ok ' +stuname); // + concatination operator
+
+                console.log(students);
+
+                var sn = prompt('Enter Student Name');
+
+                //
+                //Immeditaly check if the student is avaible in array or not
+
+                var isAvailable = false;
+
+                isAvailable = students.find(function(currentValue, index, arr){
+                    return  (currentValue === sn)?true:false; //Ternary Opoerator
+                });
+
+                if(isAvailable){
+                    //avaiable 
+                }else{
+                    //
+                    //not available
+                    students.push(sn);//Add new element to an array
+
+
+                    console.log(sn);
+                    l = document.createElement('li');
+                    l.innerHTML = sn;
+                    //var tn = document.createTextNode(sn);
+                    
+                // console.log(tn);
+                    //l.append(tn)
+
+                    console.log(l);
+                    var x = document.getElementById("myStudents");
+                    console.log(x.childNodes);
+                    console.log(x.childNodes[1]);
+
+                    //x.insertBefore(l,x.childNodes[1]);
+                    //x.appendChild(l);
+                    //node.insertBefore(newnode, existingnode)
+                    x.insertBefore(l, document.querySelector('#myStudents > li:first-child') )
+                }
+                
+
+                
+            }
+
+
+
+            
+            
+
+
+            var l;//JS Hoisting // Var is a global variable scope
+        </script>
+    </body>
+</html>
