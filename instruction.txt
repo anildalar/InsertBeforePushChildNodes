@@ -15,5 +15,13 @@ Push  = Add
 Pop   = Remove
 
 
+Ternary Operator ?:
 C?T:F
-Condition?True:Falsee
+Condition?True:False;
+
+if(Condition){
+	True
+}else{
+	False
+}
+Condition?True:False

@@ -38,13 +38,17 @@
                 var isAvailable = false;
 
                 isAvailable = students.find(function(currentValue, index, arr){
-                    return  (currentValue === sn)?true:false; //Ternary Opoerator
+                    if(currentValue === sn){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    //return  (currentValue === sn)?true:false; //Ternary Opoerator
                 });
 
-                if(isAvailable){
-                    //avaiable 
-                }else{
-                    //
+                if(!isAvailable){
+                    //avaiable
+                     //
                     //not available
                     students.push(sn);//Add new element to an array
 
@@ -66,11 +70,7 @@
                     //x.appendChild(l);
                     //node.insertBefore(newnode, existingnode)
                     x.insertBefore(l, document.querySelector('#myStudents > li:first-child') )
-                }
-                
-
-                
-            }
+                } 
 
 
 
